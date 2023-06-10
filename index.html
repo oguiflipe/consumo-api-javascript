@@ -1,18 +1,8 @@
  <html>
     <body>
-
-        <div class="container">
-
-
-        </div>
-
-
-
-
-
-
+        <div class="container"></div>
         <script>
-            
+            //consumindo api e retornando as informações na tela.
             fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1', {
                 method: 'GET'
             })
@@ -30,6 +20,7 @@
                     `;
                 })
 
+                //criando função para mostar/ocultar a descrição dos filmes.
                 var titulos = document.querySelectorAll('.tituloFilme');
 
                 for(var i = 0; i < titulos.length; i++){
@@ -41,13 +32,7 @@
                         }
                     })
                 }
-
-
-                //alert(titulos.length);
-
-                //console.log(json);
             })
-
         </script>
     </body>
 </html>
